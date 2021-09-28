@@ -1,14 +1,15 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Cart3 } from 'react-bootstrap-icons';
+import CartWidget from '../CartWidget/CartWidget';
+import BrandIcon from '../BrandIcon/BrandIcon';
 
 const NavBar = () => {
 return (
 <div>
 	<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 		<Container>
-			<Navbar.Brand href="#home">Tecnalink</Navbar.Brand>
+			<Navbar.Brand className="d-flex align-items-center" href="#home"><span><BrandIcon/></span> Tecnalink</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="me-auto">
@@ -25,7 +26,7 @@ return (
 				<Nav>
 					<Nav.Link href="#deets">Contacto</Nav.Link>
 					<Nav.Link eventKey={2} href="#carrito">
-						<Cart3 />
+						<CartWidget />
 					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
