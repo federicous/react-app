@@ -1,9 +1,13 @@
-import Main from "./components/Main/Main";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
 function App() {
 
   return (
           <>
-            <Main/>
+          <NavBar/>
+          <ItemListContainer
+          greeting="Lista de productos"
+          />          
           </>
   );
 }
